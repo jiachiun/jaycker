@@ -16,13 +16,15 @@
 		<style>
 			html,
 			body {
-			  height: 100vh;
+			  height: 100%;
 			  width: 100%;
 			  margin: 0;
 			  padding: 0;
 			  cursor: pointer;
 			}
 			canvas {
+			  width: 100%;
+		      height: 100%;
 			  border: 1px soild white;
 			}
 		</style>
@@ -43,7 +45,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				height: 100vh;
+				height: 100%;
 				
 				
 			}
@@ -232,8 +234,8 @@
 	ctx = canvas.getContext('2d');
 
 	// Set Canvas to be window size
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.width = canvas.clientWidth;
+	canvas.height = canvas.clientHeight;
 
 	// Configuration, Play with these
 	var config = {
