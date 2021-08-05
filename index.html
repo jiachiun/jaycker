@@ -29,225 +29,7 @@
 		<!-- End Google Tag Manager -->
 
 
-		<style>
-			html,
-			body {
-			  height: 100%;
-			  width: 100%;
-			  margin: 0;
-			  padding: 0;
-			  cursor: pointer;
-			}
-			canvas {
-			  width: 100%;
-		      height: 100%;
-			  border: 1px soild white;
-			}
-		</style>
-
-
-
-		<style>
-			body {
-				font-family: 'Montserrat', sans-serif;
-				font-weight: lighter;
-			}
-
-			.flex-container {
-				display: flex;
-				flex-direction: column;
-			}
-			.center {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100%;
-				
-				
-			}
-			.main-container {
-				position: absolute;
-				left: 25%;
-				right: 25%;
-			}
-
-			a {
-				text-decoration: none;
-				color: #000;
-			}
-			a.gradient-text:hover {
-				font-weight: 900;
-				background: rgb(110,105,255);
-				background-image: linear-gradient(90deg, rgba(110,105,255,1) 0%, rgba(105,242,255,1) 35%, rgba(105, 255, 182,1) 65% , rgba(43,184,240,1) 100%);
-				background-size: 200% 200%;
-				animation: rainbow 3s ease-in-out infinite;
-				-webkit-background-clip: text;
-			    -moz-background-clip: text;
-			    -webkit-text-fill-color: transparent; 
-			    -moz-text-fill-color: transparent;
-			}
-			@keyframes rainbow { 
-				0%{background-position:left}
-				50%{background-position:right}
-				100%{background-position:left}
-			}
-			p > a:hover{
-				color: #d9d9d9;
-				text-decoration:  underline;
-			}
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-weight: lighter;
-				margin:  1% 0 1% 0;
-			}
-			._12 {
-				font-size: 1.2em;
-			}
-			._14 {
-				font-size: 1.4em;
-			}
-			ul {
-				padding:0;
-				list-style: none;
-			}
-			.footer-social-icons {
-				display:block;
-				margin: 0 auto;
-			}
-			.social-icon {
-				color: #fff;
-			}
-			ul.social-icons {
-				margin-top: 10px;
-			}
-			.social-icons li {
-				vertical-align: top;
-				display: inline;
-				height: 100px;
-			}
-			.social-icons a {
-				color: #fff;
-				text-decoration: none;
-			}
-			.fa-facebook {
-				padding:10px 14px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-facebook:hover {
-				background-color: #3d5b99;
-			}
-			.fa-instagram {
-				padding:10px 12px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-instagram:hover {
-				background: #f09433; 
-				background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-				background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-				background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-			}
-			.fa-envelope {
-				padding:10px 12px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-envelope:hover {
-				background-color: #00aced;
-			}
-			.fa-twitter {
-				padding:10px 12px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-twitter:hover {
-				background-color: #00aced;
-			}
-			.fa-rss {
-				padding:10px 14px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-rss:hover {
-				background-color: #eb8231;
-			}
-			.fa-youtube {
-				padding:10px 14px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-youtube:hover {
-				background-color: #e64a41;
-			}
-			.fa-linkedin {
-				padding:10px 14px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-linkedin:hover {
-				background-color: #0073a4;
-			}
-			.fa-github {
-				padding:10px 14px;
-				-o-transition:.5s;
-				-ms-transition:.5s;
-				-moz-transition:.5s;
-				-webkit-transition:.5s;
-				transition: .5s;
-				background-color: #322f30;
-			}
-			.fa-github:hover {
-				background-color: #5a32a3;
-			}
-
-			.latest-posts i {
-				margin-right:  15px;
-			}
-
-			.latest-posts .title {
-				margin-bottom:  10px;
-			}
-
-
-			.latest-posts a {
-				text-decoration: underline;
-			}
-
-		</style>
+		<link href="styles.css" rel="stylesheet">
 
 	</head>
 	<body>
@@ -259,6 +41,7 @@
 
 		<div class="flex-container center main-container">
 			<h1>Hi, I'm <strong>JayC Ker.</strong></h1>
+			<span>Tech Entrepreneur & Indie Maker</span>
 			<div class="footer-social-icons">
 			    <ul class="social-icons">
 			        <li><a href="https://www.facebook.com/jiachiun" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
@@ -268,7 +51,11 @@
 			    </ul>
 			</div>
 
+			<div style="" class="text-center">
+				<span class="text-fineprint">I am launching 12 startups in 12 months.<br>Follow me on <a href="https://twitter.com/jayc_ker" class="gradient-text">Twitter</a> to keep an eye on my progress.</span>
+			</div>
 			<div class="latest-posts" style="margin-top: 60px">
+
 				<h4 class="title"><strong>Latest</strong></h4>
 				<a href="/ten-years-in-review" class="gradient-text"><i class="fa fa-caret-right"></i>Turning 30 — Ten Years In Review</a>
 			</div>
@@ -300,10 +87,10 @@
 	var colorPalette = {
 		bg: { r: 255, g: 255, b: 255 },
 		matter: [
-	  { r: 110, g: 105, b: 255 }, // darkPRPL
-	  { r: 105, g: 242, b: 255 }, // rockDust
-	  { r: 43, g: 184, b: 240 }, // solorFlare
-	  { r: 105, g: 255, b: 182 } // totesASun
+	  { r: 110, g: 105, b: 255 }, // darkPRPL #6e69ff
+	  { r: 105, g: 242, b: 255 }, // rockDust #69f2ff
+	  { r: 43, g: 184, b: 240 }, // solorFlare #2bb8f0
+	  { r: 105, g: 255, b: 182 } // totesASun #69ffb6
 	  ] };
 
 
