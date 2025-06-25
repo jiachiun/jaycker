@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hello, I'm JayC Ker</title>
-		<meta name="description" content="Tech Entrepreneur & Indie Maker based in Malaysia." />
+		<title>Turning 34 — Becoming JayC</title>
+		<meta name="description" content="A sweet decade where we are wise enough to make smarter decisions, yet still young enough to recover from any bad ones." />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -12,9 +12,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 		<meta property="og:site_name" content="JayC Ker"/>
-		<meta property="og:title" content="Hello, I'm JayC Ker" />
-		<meta property="og:description" content="Tech Entrepreneur & Indie Maker based in Malaysia." />
-		<meta property="og:image" content="https://jaycker.com/images/banner-jayc-ker.jpg" />
+		<meta property="og:title" content="Turning 34 — Becoming JayC" />
+		<meta property="og:description" content="If you have known me by two names or more, we have known each other a lifetime." />
+		<meta property="og:image" content="https://jaycker.com/images/banner-becoming-jayc.jpg" />
 		<meta property="og:image:width" content="1200"/>
 		<meta property="og:image:height" content="630"/>
 		<meta property="og:type" content="website" />
@@ -28,11 +28,31 @@
 		</script>
 		<!-- End Google Tag Manager -->
 
-
 		<link href="styles.css" rel="stylesheet">
+
+
+
+
+
+		<style>
+	
+			#loading_canva {
+				position: absolute;
+				top:  45%;
+			}
+
+			#loading_canva img {
+				display: block;
+				margin-bottom: 10px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+		</style>
 
 	</head>
 	<body>
+
 		<!-- Google Tag Manager (noscript) -->
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-522HJV4"
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -40,29 +60,28 @@
 
 
 		<div class="flex-container center main-container">
-			<h1>Hi, I'm <strong>JayC Ker.</strong></h1>
-			<span>Tech Entrepreneur & Indie Maker</span>
-			<div class="footer-social-icons">
-			    <ul class="social-icons">
-			        <li><a href="https://www.facebook.com/jiachiun" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-			        <li><a href="https://www.instagram.com/jayc_ker/" target="_blank" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
-				<li><a href="https://twitter.com/jayc_ker" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-			        <li><a href="mailto:jayc@jayc.tech" target="_blank" class="social-icon"> <i class="fa fa-envelope"></i></a></li>
-			    </ul>
+			<div class="breadcrumbs" style="margin-top: 10px">
+				<a href="/" class="gradient-text"><i class="fa fa-caret-left"></i>Back to home</a>
+		
 			</div>
-
-			<!-- <div style="" class="text-center">
-				<span class="text-fineprint">I am launching 12 startups in 12 months.<br>Follow me on <a href="https://twitter.com/jayc_ker" class="gradient-text">Twitter</a> to keep an eye on my progress.</span>
-			</div> -->
-			<div class="latest-posts" style="margin-top: 60px">
-
-				<h3 class="title"><strong>Life Journals</strong></h3>
-				<ul>
-					<li><a href="/becoming-jayc" class="gradient-text"><i class="fa fa-caret-right"></i>Becoming JayC</a></li>
-					<li><a href="/ten-years-in-review" class="gradient-text"><i class="fa fa-caret-right"></i>Ten Years In Review</a></li>
-				</ul>
+			
+			<div id="loading_canva">
+				<img src="loading.gif">
+				Loading memories...
 			</div>
+			<div id="canva_container" style="position: relative; width: 100%; height: 0; padding-top: 75.0000%;
+				padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+				border-radius: 8px; will-change: transform; visibility: hidden;">
+				
+				<iframe id="canva_iframe" loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+					src="https://www.canva.com/design/DAGrSQgkZzQ/gLE_ConjTdkUiOgfuAOAmg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+				</iframe>
+
+			</div>
+			Turning 34 - Becoming JayC
+			<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGrSQgkZzQ&#x2F;gLE_ConjTdkUiOgfuAOAmg&#x2F;view?utm_content=DAGrSQgkZzQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-muted gradient-text" style="margin-top: 5px;"><small>view full screen</small></a>
 		</div>
+
 		<canvas id="canvas"></canvas>
 
 	</body>
@@ -216,4 +235,10 @@
 
 	// First particle explosion
 	initParticles(config.particleNumber);
+
+
+	document.getElementById('canva_iframe').onload = function() {
+		document.getElementById("canva_container").style.visibility = "visible";
+		document.getElementById("loading_canva").style.display = "none";
+	};
 </script>
